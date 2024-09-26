@@ -6,10 +6,7 @@ struct Funcionario
     {
     string nome;
     string cargo;
-    float salBase;
-    float beneficios;
-    float descontos;
-    float salLiquido;
+    double salBase, beneficios, descontos, salLiquido;
     };
 
 // Função cadastrar funcionário
@@ -39,10 +36,10 @@ void Impressao(Funcionario f[], int total)
         cout << "\nFuncionário " << i + 1 << ":" << endl;
         cout << "Nome: " << f[i].nome << endl;
         cout << "Cargo: " << f[i].cargo << endl;
-        cout << "Salário Base: " << f[i].salBase << endl;
+        cout << "Salário Base: R$.2lf " << f[i].salBase << endl;
         cout << "Benefícios: " << f[i].beneficios << endl;
         cout << "Descontos: " << f[i].descontos << endl;
-        cout << "Salário Líquido: " << f[i].salLiquido << endl;
+        cout << "Salário Líquido: R$.2lf " << f[i].salLiquido << endl;
         }
     }
 
