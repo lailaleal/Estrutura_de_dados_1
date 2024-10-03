@@ -12,15 +12,14 @@ using namespace std;
 void Separar (double numero, int &parteInteira, double &parteFracionaria) { // & referencia, a função não fará copia das variaveis parteInteira e
     // parteFracionaria, ao modificar, os valores serão adicionados no endereço de memória destas varáveis.
 
-    // 1. Separando a parte inteira
-    if (numero >= 0) {
+    // Separando a parte inteira
+
         parteInteira = static_cast<int>(numero);  // static_cast<int>(numero), a variável numero foi atribuida como tipo double, esta função modifica a
         // variavel para inteiro, armazenando na variável parteInteira so a parte inteira do número digitado.
         parteFracionaria = numero - parteInteira;
-    } else {
-        parteInteira = static_cast<int>(numero);  // Parte inteira para números negativos (truncamento para baixo)
-        parteFracionaria = (numero - parteInteira) * -1;
-        }
+
+        // Número < 0, ex: -1.123 parteInteira: -1; parteFracionaria: -0.123, pois -1 + (-0,123)= -1.123
+
     }
 
 int main() {
