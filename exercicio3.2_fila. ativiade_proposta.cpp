@@ -72,6 +72,9 @@ int main() {
     l.pushBack(5);
     l.pushBack(3);
     l.pushFront(8);
+    l.pushBack(50);
+    l.pushFront(78);//
+    l.pushBack(1);
     l.pushBack(75);
     l.pushFront(25);
     l.pushBack(60);
